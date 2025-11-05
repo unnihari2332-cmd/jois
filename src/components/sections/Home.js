@@ -1,7 +1,23 @@
 const Home = () => {
   return (
-    <section className="home image" id="home">
-      <div>
+    <section className="home image relative overflow-hidden" id="home">
+      {/* ✅ Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/assets/jois.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* ✅ Overlay for readability (optional) */}
+      <div className="absolute inset-0 bg-black/30"></div>
+
+      {/* ✅ Foreground Content */}
+      <div className="relative z-10 flex flex-col justify-center items-center h-screen text-center text-white">
         <div className="position-relative">
           <h1>
             <span>
@@ -17,13 +33,14 @@ const Home = () => {
             </span>
           </h1>
         </div>
+
+        {/* ✅ Call to Action */}
+        <span className="animated-layer animated-btn cta mt-6" id="cta">
+          <span></span>
+        </span>
       </div>
-      {/* CALL TO ACTION STARTS */}
-      <span className="animated-layer animated-btn cta" id="cta">
-        <span></span>
-      </span>
-      {/* CALL TO ACTION ENDS */}
     </section>
   );
 };
+
 export default Home;
