@@ -6,17 +6,14 @@ const Home = () => {
           <h1>
             <span>
               <span className="animated-layer">
-                Hello<span>.</span>
+                Welcome <span>.</span>
               </span>
             </span>
             <span className="position-relative">
-              <span className="animated-layer">I am</span>
-              <span className="intro animated-layer">
-                Front-end Developer with 7 years experience based in London
-              </span>
+              <span className="animated-layer">to</span>
             </span>
             <span>
-              <span className="animated-layer">Steven</span>
+              <span className="animated-layer">Junior Odyssey International</span>
             </span>
           </h1>
         </div>
