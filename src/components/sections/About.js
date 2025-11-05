@@ -37,26 +37,30 @@ const About = () => {
               className="animated-layer fade-in-up-animation fadeInUp wow"
               data-wow-offset={200}
             >
-              At <strong>Junior Odyssey International School (JOIS)</strong>, the
-              <strong> Homer Eduship Curriculum</strong> is crafted to nurture young minds.
+              At <strong>Junior Odyssey International School (JOIS)</strong>, our
+              <strong> Homer Eduship Curriculum</strong> shapes young minds through
+              joyful and meaningful learning.
             </p>
             <p
               className="animated-layer fade-in-up-animation fadeInUp wow"
               data-wow-offset={200}
             >
-              It focuses on <strong>early childhood development</strong> through play, curiosity, and creativity.
+              We inspire curiosity and creativity while nurturing early development
+              through play and exploration.
             </p>
             <p
               className="animated-layer fade-in-up-animation fadeInUp wow"
               data-wow-offset={200}
             >
-              Inspired by the UK’s <strong>Early Years Foundation Stage (EYFS)</strong>, our approach blends global best practices.
+              Rooted in the UK’s <strong>Early Years Foundation Stage (EYFS)</strong>,
+              our program integrates global best practices.
             </p>
             <p
               className="animated-layer fade-in-up-animation fadeInUp wow"
               data-wow-offset={200}
             >
-              We aim to build a strong academic and emotional foundation for lifelong learning.
+              Every child’s journey builds a confident, compassionate, and capable learner
+              ready for tomorrow.
             </p>
           </div>
         </div>
