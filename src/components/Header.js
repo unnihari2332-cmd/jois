@@ -6,7 +6,7 @@ const Header = () => {
         <div className="logo">
           <a href="#home" aria-label="Jois home">
             <img
-              src="/assets/jois-logo.svg"
+              src="/assets/jois.png"
               alt="Jois logo"
               className="header-logo"
             />
