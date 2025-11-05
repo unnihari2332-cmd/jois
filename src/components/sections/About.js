@@ -1,4 +1,3 @@
-
 const About = () => {
   return (
     <section className="about main-section flex-column-mobile" id="about">
@@ -17,7 +16,6 @@ const About = () => {
           </div>
         </div>
         {/* IMAGE ENDS */}
-
         {/* INFO STARTS */}
         <div className="about-content">
           <h2>
@@ -32,46 +30,30 @@ const About = () => {
               </span>
             </span>
           </h2>
-
           <div className="infos">
             <p
               className="animated-layer fade-in-up-animation fadeInUp wow"
               data-wow-offset={200}
             >
-              At <strong>Junior Odyssey International School (JOIS)</strong>, our
-              <strong> Homer Eduship Curriculum</strong> shapes young minds through
-              joyful and meaningful learning.
+              At <strong>Junior Odyssey International School (JOIS)</strong>, our{' '}
+              <strong>Homer Eduship Curriculum</strong> shapes young minds through
+              joyful and meaningful learning. We inspire curiosity and creativity while 
+              nurturing early development through play and exploration.
             </p>
-                <span>.</span>
             <p
               className="animated-layer fade-in-up-animation fadeInUp wow"
               data-wow-offset={200}
+              data-wow-delay="0.2s"
             >
-              We inspire curiosity and creativity while nurturing early development
-              through play and exploration.
-            </p>
-                <span>.</span>
-            <p
-              className="animated-layer fade-in-up-animation fadeInUp wow"
-              data-wow-offset={200}
-            >
-              Rooted in the UK’s <strong>Early Years Foundation Stage (EYFS)</strong>,
-              our program integrates global best practices.
-            </p>
-                <span>.</span>
-            <p
-              className="animated-layer fade-in-up-animation fadeInUp wow"
-              data-wow-offset={200}
-            >
-              Every child’s journey builds a confident, compassionate, and capable learner
-              ready for tomorrow.
+              Rooted in the UK's <strong>Early Years Foundation Stage (EYFS)</strong>,
+              our program integrates global best practices. Every child's journey builds 
+              a confident, compassionate, and capable learner ready for tomorrow.
             </p>
           </div>
         </div>
         {/* INFO ENDS */}
       </div>
       {/* INFO HOLDER ENDS */}
-
       {/* SEPARATOR IMAGE */}
       <img alt="section separator" className="separator hide-mobile" src="assets/separator.png" />
     </section>
