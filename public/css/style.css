@@ -11,8 +11,7 @@ Version: 1.0
       	+ General
 		  - Miscellaneous
 		  - Preloader
-		  - Scroll Bar
-		  - Title Section
+                  - Title Section
 		  - Buttons
         - Header
         + Sections
@@ -260,90 +259,6 @@ ul {
   100% {
     width: 0;
   }
-}
-
-/*** Scroll Bar ***/
-
-.scroll-progress {
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  bottom: 32px;
-  z-index: 1;
-  width: calc(100vw - 300px);
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-}
-
-.scroll-progress > div {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  align-items: center;
-}
-
-.scroll-progress > div > div {
-  height: 8px;
-  width: 100%;
-  background-color: rgba(30, 41, 59, 0.12);
-  border-radius: 4px;
-}
-
-.mCSB_horizontal.mCSB_inside > .mCSB_container {
-  margin-bottom: 0;
-}
-
-.mCSB_scrollTools.mCSB_scrollTools_horizontal {
-  max-width: calc(100vw - 300px);
-  margin: 0 auto;
-  bottom: 32px;
-  z-index: 11;
-  opacity: 1;
-}
-
-.mCSB_dragger_bar {
-  background: transparent !important;
-}
-
-.mCSB_dragger_bar:before {
-  position: absolute;
-  content: "";
-  top: 3px;
-  left: 0;
-  width: 27px;
-  height: 8px;
-  border-radius: 4px;
-  transition: 0.3s;
-  background-image: var(--jois-accent-gradient);
-  background-color: var(--jois-link-color);
-}
-
-.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger,
-.mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-  width: 27px !important;
-}
-
-.mCSB_dragger_bar:after {
-  position: absolute;
-  content: "Scroll";
-  top: -26px;
-  left: -4px;
-  height: 22px;
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0.3px;
-  transition: 0.3s;
-  color: var(--jois-link-color);
-}
-
-.mCSB_dragger_bar:hover:before,
-.mCSB_dragger_bar:hover:after {
-  opacity: 1;
-}
-
-.mCSB_draggerRail {
-  display: none;
 }
 
 /*** Title Section ***/
