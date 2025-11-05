@@ -51,6 +51,24 @@ body {
   color: #1f2933;
 }
 
+:root {
+  --jois-pink: #ff4f9f;
+  --jois-sun: #ffb21f;
+  --jois-green: #7fd95b;
+  --jois-blue: #34a9ff;
+  --jois-link-color: var(--jois-pink);
+  --jois-accent-color: var(--jois-blue);
+  --jois-accent-gradient: linear-gradient(
+    135deg,
+    var(--jois-pink) 0%,
+    var(--jois-sun) 33%,
+    var(--jois-green) 66%,
+    var(--jois-blue) 100%
+  );
+  --jois-accent-shadow-strong: rgba(255, 79, 159, 0.35);
+  --jois-accent-shadow-soft: rgba(52, 169, 255, 0.25);
+}
+
 #wrapper {
   width: 100%;
   overflow-x: auto;
@@ -163,6 +181,8 @@ ul {
   top: 50%;
   width: 3px;
   height: 0;
+  background-image: var(--jois-accent-gradient);
+  background-color: var(--jois-link-color);
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
@@ -295,6 +315,8 @@ ul {
   height: 8px;
   border-radius: 4px;
   transition: 0.3s;
+  background-image: var(--jois-accent-gradient);
+  background-color: var(--jois-link-color);
 }
 
 .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger,
@@ -312,7 +334,7 @@ ul {
   font-weight: 400;
   letter-spacing: 0.3px;
   transition: 0.3s;
-  color: #1f2933;
+  color: var(--jois-link-color);
 }
 
 .mCSB_dragger_bar:hover:before,
@@ -353,7 +375,6 @@ ul {
 /*** Buttons ***/
 
 .custom-btn {
-  box-shadow: none !important;
   border-radius: 40px;
   font-weight: 500;
   color: #fff;
@@ -363,13 +384,13 @@ ul {
   display: inline-block;
   position: relative;
   border: 0;
-  font-weight: 500;
   text-transform: capitalize;
   cursor: pointer;
   text-decoration: none;
   user-select: none;
-  background-color: #2563eb;
-  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.25);
+  background-image: var(--jois-accent-gradient);
+  background-color: var(--jois-link-color);
+  box-shadow: 0 15px 35px var(--jois-accent-shadow-strong) !important;
 }
 
 .custom-btn span {
@@ -386,6 +407,8 @@ ul {
   width: 0;
   transition-duration: 0.5s;
   z-index: 1;
+  background-image: var(--jois-accent-gradient);
+  background-color: var(--jois-link-color);
 }
 
 .custom-btn:hover {
@@ -464,7 +487,7 @@ ul {
 
 .animated-btn span:after {
   left: -60px;
-  color: #2563eb;
+  color: var(--jois-link-color);
 }
 
 /* [ HEADER ] */
@@ -513,6 +536,17 @@ header .header-inner .menu ul li span:before {
   top: -49px;
   border-radius: 0 0 4px 4px;
   transition: 0.3s;
+  background-image: var(--jois-accent-gradient);
+  background-color: var(--jois-link-color);
+}
+
+header .header-inner .menu ul li span:hover,
+header .header-inner .menu ul li span.active {
+  color: var(--jois-link-color);
+}
+
+header .header-inner .mail p span {
+  color: var(--jois-link-color);
 }
 
 header .header-inner .menu ul li span:hover:before,
@@ -569,8 +603,15 @@ header .mobile-menu {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 0px;
   -webkit-text-stroke-color: rgba(15, 23, 42, 0.35);
-  text-shadow: 8px 8px rgba(37, 99, 235, 0.25),
+  text-shadow: 8px 8px rgba(255, 79, 159, 0.35),
     20px 20px rgba(15, 23, 42, 0.12);
+}
+
+.home > div > div h1 > span:first-child span span {
+  background-image: var(--jois-accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .home > div > div .intro {
@@ -601,6 +642,9 @@ header .mobile-menu {
   right: 60px;
   top: calc(50vh - 30px);
   z-index: 1;
+  background-image: var(--jois-accent-gradient);
+  background-color: var(--jois-link-color);
+  box-shadow: 0 20px 45px var(--jois-accent-shadow-soft);
 }
 
 /*** ABOUT SECTION ***/
@@ -642,6 +686,10 @@ header .mobile-menu {
   overflow: hidden;
 }
 
+.about h2 > span:first-child {
+  color: var(--jois-link-color);
+}
+
 .about .infos {
   display: flex;
   margin: 45px 0 0 100px;
@@ -672,6 +720,7 @@ header .mobile-menu {
   top: 1px;
   font-size: 8px;
   content: "\f111";
+  color: var(--jois-link-color);
 }
 
 .about .infos ul li > span > span span:first-child {
@@ -686,7 +735,7 @@ header .mobile-menu {
 .about .infos ul li > span > span span:nth-child(2) a {
   /* iOS fixes*/
   text-decoration: none !important;
-  color: #2563eb !important;
+  color: var(--jois-link-color) !important;
 }
 
 .about .infos ul li:first-child > span > span {
@@ -757,6 +806,7 @@ header .mobile-menu {
 .about .skills > div > div > div span i {
   font-size: 34px;
   transform: rotate(-45deg);
+  color: var(--jois-link-color);
 }
 
 .about .skills > div > div > div h4 {
@@ -821,6 +871,8 @@ header .mobile-menu {
   height: 12px;
   transform: translateY(-50%) rotate(45deg);
   border-radius: 3px;
+  background-image: var(--jois-accent-gradient);
+  background-color: var(--jois-link-color);
 }
 
 .about .timeline ol li > div {
@@ -880,6 +932,20 @@ header .mobile-menu {
   margin-bottom: 20px;
   font-weight: 600;
   line-height: 20px;
+  color: var(--jois-link-color);
+}
+
+.about .timeline ol li > div > div > span {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background-image: var(--jois-accent-gradient);
+  background-color: var(--jois-link-color);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 12px;
 }
 
 .about .timeline ol li > div > div i {
@@ -991,6 +1057,7 @@ header .mobile-menu {
   font-size: 60px;
   font-weight: 700;
   margin-bottom: 7px;
+  color: var(--jois-link-color);
 }
 
 .facts > div > div > div > div p {
@@ -1034,11 +1101,11 @@ header .mobile-menu {
   transition: 0.3s;
 }
 
-.portfolio
-  .single-item
-  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.portfolio .single-item .swiper-pagination-bullet.swiper-pagination-bullet-active {
   width: 35px;
   border-radius: 6px;
+  background-image: var(--jois-accent-gradient);
+  background-color: var(--jois-link-color);
 }
 
 .portfolio .single-item .details {
@@ -1124,6 +1191,9 @@ header .mobile-menu {
   right: 150px;
   z-index: 11;
   outline: none !important;
+  background-image: var(--jois-accent-gradient);
+  background-color: var(--jois-link-color);
+  box-shadow: 0 18px 40px var(--jois-accent-shadow-soft);
 }
 
 .next-item {
@@ -1223,6 +1293,7 @@ header .mobile-menu {
   background: #ffffff;
   border: 3px solid #e2e8f0;
   box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+  color: var(--jois-link-color);
 }
 
 .contact .boxes > div > div p {
@@ -1234,7 +1305,7 @@ header .mobile-menu {
 .contact .boxes > div > div p a {
   /* iOS fixes*/
   text-decoration: none !important;
-  color: #2563eb !important;
+  color: var(--jois-link-color) !important;
 }
 
 .contact .boxes > div > div span.small-text {
@@ -1254,9 +1325,13 @@ header .mobile-menu {
 .contact .boxes .social li a {
   width: 30px;
   height: 30px;
-  color: #2563eb;
+  color: var(--jois-link-color);
   margin: 0 10px;
   transition: 0.3s;
+}
+
+.contact .boxes .social li a:hover {
+  color: var(--jois-accent-color);
 }
 
 .contact .separator {
@@ -1349,6 +1424,8 @@ header .mobile-menu {
 .clients .swiper-pagination-bullet.swiper-pagination-bullet-active {
   width: 35px;
   border-radius: 6px;
+  background-image: var(--jois-accent-gradient);
+  background-color: var(--jois-link-color);
 }
 
 /*** TESTIMONIALS SECTION ***/
@@ -1403,7 +1480,7 @@ header .mobile-menu {
   z-index: 1111;
   left: -30px;
   font-size: 210px;
-  color: rgba(37, 99, 235, 0.2);
+  color: rgba(255, 79, 159, 0.22);
 }
 
 .testimonials .quote-container > div p {
@@ -1435,6 +1512,7 @@ header .mobile-menu {
   margin-top: auto;
   font-style: normal;
   margin-bottom: 6px;
+  color: var(--jois-link-color);
 }
 
 .testimonials .quote-container > div p span.job {
@@ -1538,6 +1616,9 @@ header .mobile-menu {
   height: 28px;
   line-height: 23px;
   font-weight: 500;
+  background-image: var(--jois-accent-gradient);
+  background-color: var(--jois-link-color);
+  color: #fff;
 }
 
 .blog .meta {
@@ -1587,6 +1668,7 @@ header .mobile-menu {
 
 .copyright > div > span a {
   text-decoration: none;
+  color: var(--jois-link-color);
 }
 
 .copyright ul {
@@ -1600,6 +1682,10 @@ header .mobile-menu {
   color: rgba(30, 41, 59, 0.65);
   margin: 0 10px;
   transition: 0.3s;
+}
+
+.copyright ul li a:hover {
+  color: var(--jois-link-color);
 }
 
 /* [ BLOG PAGE ] */
@@ -1698,6 +1784,9 @@ header .mobile-menu {
   height: 28px;
   line-height: 23px;
   font-weight: 500;
+  background-image: var(--jois-accent-gradient);
+  background-color: var(--jois-link-color);
+  color: #fff;
 }
 
 .blog-page .blog-content .meta {
@@ -1738,7 +1827,10 @@ header .mobile-menu {
 }
 
 .page-item.active .page-link {
-  border: 1px solid #2563eb;
+  border: 1px solid var(--jois-link-color);
+  background-image: var(--jois-accent-gradient);
+  background-color: var(--jois-link-color);
+  color: #fff !important;
 }
 
 .blog-page .page-link:focus,
@@ -1747,7 +1839,7 @@ header .mobile-menu {
 }
 
 .blog-page .page-link:hover {
-  color: #2563eb !important;
+  color: var(--jois-link-color) !important;
 }
 
 .blog-page .main-post {
@@ -1769,6 +1861,10 @@ header .mobile-menu {
   border-radius: 10px;
   max-width: 100%;
   height: auto;
+}
+
+.blog-page .main-post .meta i {
+  color: var(--jois-link-color);
 }
 
 /* [ RESPONSIVE ] */
@@ -1908,7 +2004,8 @@ header .mobile-menu {
   #menuToggle input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(4px, 0);
-    background: #2563eb;
+    background-image: var(--jois-accent-gradient);
+    background-color: var(--jois-link-color);
   }
 
   #menuToggle input:checked ~ span:nth-last-child(3) {
