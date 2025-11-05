@@ -41,6 +41,7 @@ const About = () => {
               <strong> Homer Eduship Curriculum</strong> shapes young minds through
               joyful and meaningful learning.
             </p>
+                <span>.</span>
             <p
               className="animated-layer fade-in-up-animation fadeInUp wow"
               data-wow-offset={200}
@@ -48,6 +49,7 @@ const About = () => {
               We inspire curiosity and creativity while nurturing early development
               through play and exploration.
             </p>
+                <span>.</span>
             <p
               className="animated-layer fade-in-up-animation fadeInUp wow"
               data-wow-offset={200}
@@ -55,6 +57,7 @@ const About = () => {
               Rooted in the UK’s <strong>Early Years Foundation Stage (EYFS)</strong>,
               our program integrates global best practices.
             </p>
+                <span>.</span>
             <p
               className="animated-layer fade-in-up-animation fadeInUp wow"
               data-wow-offset={200}
