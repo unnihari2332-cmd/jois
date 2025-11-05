@@ -1,5 +1,4 @@
 import Header from "@/src/components/Header";
-import ScrollBar from "@/src/components/ScrollBar";
 import About from "@/src/components/sections/About";
 import Blog from "@/src/components/sections/Blog";
 import Clients from "@/src/components/sections/Clients";
@@ -41,7 +40,6 @@ const Index = () => {
             <Copyright />
           </main>
         </div>
-        <ScrollBar />
       </div>
     </Fragment>
   );
