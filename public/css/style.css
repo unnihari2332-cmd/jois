@@ -504,31 +504,62 @@ header {
 
 header .header-inner {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 30px;
+  padding: 26px 32px;
+  gap: 32px;
   opacity: 0;
+}
+
+header .header-inner .logo {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+header .header-inner .logo a {
+  display: inline-flex;
+  align-items: center;
+}
+
+header .header-inner .header-logo {
+  height: 68px;
+  width: auto;
+  display: block;
+}
+
+header .header-inner .menu {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
 }
 
 header .header-inner .menu ul {
   display: flex;
+  align-items: center;
+  gap: 36px;
+  margin: 0;
+  padding: 0;
 }
 
 header .header-inner .menu ul li {
   font-size: 18px;
+  list-style: none;
 }
 
-header .header-inner .menu ul li:not(:last-child) {
-  margin-right: 35px;
-}
-
-header .header-inner .menu ul li span {
+header .header-inner .menu ul li a {
   cursor: pointer;
   transition: 0.3s;
   position: relative;
-  font-weight: 500;
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+  padding: 0 2px;
+  display: inline-flex;
+  align-items: center;
 }
 
-header .header-inner .menu ul li span:before {
+header .header-inner .menu ul li a:before {
   position: absolute;
   width: 100%;
   height: 15px;
@@ -540,24 +571,45 @@ header .header-inner .menu ul li span:before {
   background-color: var(--jois-link-color);
 }
 
-header .header-inner .menu ul li span:hover,
-header .header-inner .menu ul li span.active {
+header .header-inner .menu ul li a:hover,
+header .header-inner .menu ul li a.active {
   color: var(--jois-link-color);
 }
 
-header .header-inner .mail p span {
-  color: var(--jois-link-color);
-}
-
-header .header-inner .menu ul li span:hover:before,
-header .header-inner .menu ul li span.active:before {
+header .header-inner .menu ul li a:hover:before,
+header .header-inner .menu ul li a.active:before {
   top: -34px;
+}
+
+header .header-inner .mail {
+  flex: 0 0 auto;
+  text-align: right;
 }
 
 header .header-inner .mail p {
   margin: 0;
   font-size: 18px;
   font-weight: 500;
+}
+
+header .header-inner .mail p span {
+  color: var(--jois-link-color);
+}
+
+header .mobile-brand {
+  display: none;
+}
+
+header .mobile-brand .mobile-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .mobile-brand img {
+  height: 64px;
+  width: auto;
+  display: block;
 }
 
 header .mobile-menu {
@@ -1915,6 +1967,12 @@ header .mobile-menu {
   section {
     min-height: initial;
     height: auto;
+  }
+
+  header .mobile-brand {
+    display: flex;
+    justify-content: center;
+    padding: 24px 0 10px;
   }
 
   .separator-mobile-down {
