@@ -95,28 +95,28 @@ export const jqueryFuntion = () => {
         Math.abs(parseInt($(".mCSB_container").css("left"))) > homewidth &&
         Math.abs(parseInt($(".mCSB_container").css("left"))) < aboutwidth
       ) {
-        $(".menu ul li span").removeClass("active");
+        $(".menu ul li a").removeClass("active");
         $("#about-link").addClass("active");
       } else if (
         Math.abs(parseInt($(".mCSB_container").css("left"))) > aboutwidth &&
         Math.abs(parseInt($(".mCSB_container").css("left"))) < portfoliowidth
       ) {
-        $(".menu ul li span").removeClass("active");
+        $(".menu ul li a").removeClass("active");
         $("#portfolio-link").addClass("active");
       } else if (
         Math.abs(parseInt($(".mCSB_container").css("left"))) > portfoliowidth &&
         Math.abs(parseInt($(".mCSB_container").css("left"))) < contactwidth
       ) {
-        $(".menu ul li span").removeClass("active");
+        $(".menu ul li a").removeClass("active");
         $("#contact-link").addClass("active");
       } else if (
         Math.abs(parseInt($(".mCSB_container").css("left"))) > contactwidth &&
         Math.abs(parseInt($(".mCSB_container").css("left"))) < blogwidth
       ) {
-        $(".menu ul li span").removeClass("active");
+        $(".menu ul li a").removeClass("active");
         $("#blog-link").addClass("active");
       } else {
-        $(".menu ul li span").removeClass("active");
+        $(".menu ul li a").removeClass("active");
         $("#home-link").addClass("active");
       }
     }
@@ -200,9 +200,11 @@ export const jqueryFuntion = () => {
     /*  MENU LINKS
     /* ----------------------------------------------------------- */
 
-    $(".menu ul li span").on("click", function () {
-      setTimeout(function () {
-        $(this).toggleClass("active");
+    $(".menu ul li a").on("click", function (e) {
+      e.preventDefault();
+      const link = $(this);
+      setTimeout(() => {
+        link.toggleClass("active");
       }, 1600);
     });
 

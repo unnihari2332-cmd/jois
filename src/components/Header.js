@@ -3,26 +3,43 @@ const Header = () => {
     <header>
       {/* Desktop Menu Starts */}
       <div className="header-inner hide-mobile">
+        <div className="logo">
+          <a href="#home" aria-label="Jois home">
+            <img
+              src="/assets/jois-logo.svg"
+              alt="Jois logo"
+              className="header-logo"
+            />
+          </a>
+        </div>
         {/* MENU STARTS */}
         <div className="menu">
           <nav>
             <ul>
               <li>
-                <span className="active" id="home-link">
+                <a className="active" href="#home" id="home-link">
                   Home
-                </span>
+                </a>
               </li>
               <li>
-                <span id="about-link">About</span>
+                <a href="#about" id="about-link">
+                  About
+                </a>
               </li>
               <li>
-                <span id="portfolio-link">Portfolio</span>
+                <a href="#portfolio" id="portfolio-link">
+                  Portfolio
+                </a>
               </li>
               <li>
-                <span id="contact-link">Contact</span>
+                <a href="#contact" id="contact-link">
+                  Contact
+                </a>
               </li>
               <li>
-                <span id="blog-link">Blog</span>
+                <a href="#blog" id="blog-link">
+                  Blog
+                </a>
               </li>
             </ul>
           </nav>
@@ -31,13 +48,18 @@ const Header = () => {
         {/* FREELANCE STARTS */}
         <div className="mail">
           <p>
-            Email :<span> contact@steven.net</span>
+            Email :<span> hello@jois.com</span>
           </p>
         </div>
         {/* FREELANCE ENDS */}
       </div>
       {/* Desktop Menu Ends */}
       {/* Mobile Menu Starts */}
+      <div className="mobile-brand">
+        <a href="#home" aria-label="Jois home" className="mobile-logo">
+          <img src="/assets/jois-logo.svg" alt="Jois logo" />
+        </a>
+      </div>
       <nav className="mobile-menu">
         <div id="menuToggle">
           <input type="checkbox" id="checkboxmenu" />
