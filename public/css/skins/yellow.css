@@ -39,5 +39,5 @@ header .header-inner .menu ul li span:before,
 }
 
 .home>div>div h1 > span > span > span {
-    text-shadow: 8px 8px #ffb400, 20px 20px #222;
+    text-shadow: 8px 8px #ffb400, 20px 20px rgba(15, 23, 42, 0.12);
 }
