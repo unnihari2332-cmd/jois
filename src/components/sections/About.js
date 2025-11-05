@@ -30,44 +30,44 @@ const About = () => {
               </span>
             </span>
           </h2>
-          <div className="infos" style={{ lineHeight: '1.8' }}>
-            <span
+          <div className="infos" style={{ maxWidth: '600px' }}>
+            <p
               className="animated-layer fade-in-up-animation fadeInUp wow"
               data-wow-offset={200}
               data-wow-delay="0s"
-              style={{ display: 'block', marginBottom: '10px' }}
+              style={{ marginBottom: '15px', lineHeight: '1.6' }}
             >
               At <strong>Junior Odyssey International School (JOIS)</strong>, our{' '}
               <strong>Homer Eduship Curriculum</strong> shapes young minds through
               joyful and meaningful learning.
-            </span>
-            <span
+            </p>
+            <p
               className="animated-layer fade-in-up-animation fadeInUp wow"
               data-wow-offset={200}
               data-wow-delay="0.2s"
-              style={{ display: 'block', marginBottom: '10px' }}
+              style={{ marginBottom: '15px', lineHeight: '1.6' }}
             >
               We inspire curiosity and creativity while nurturing early development
               through play and exploration.
-            </span>
-            <span
+            </p>
+            <p
               className="animated-layer fade-in-up-animation fadeInUp wow"
               data-wow-offset={200}
               data-wow-delay="0.4s"
-              style={{ display: 'block', marginBottom: '10px' }}
+              style={{ marginBottom: '15px', lineHeight: '1.6' }}
             >
               Rooted in the UK's <strong>Early Years Foundation Stage (EYFS)</strong>,
               our program integrates global best practices.
-            </span>
-            <span
+            </p>
+            <p
               className="animated-layer fade-in-up-animation fadeInUp wow"
               data-wow-offset={200}
               data-wow-delay="0.6s"
-              style={{ display: 'block', marginBottom: '10px' }}
+              style={{ marginBottom: '15px', lineHeight: '1.6' }}
             >
               Every child's journey builds a confident, compassionate, and capable learner
               ready for tomorrow.
-            </span>
+            </p>
           </div>
         </div>
         {/* INFO ENDS */}
