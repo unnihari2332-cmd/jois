@@ -35,10 +35,10 @@ const About = () => {
 
           <div className="infos">
             <p className="animated-layer fade-in-up-animation fadeInUp wow" data-wow-offset={200}>
-              <p>At <strong>Junior Odyssey International School (JOIS)</strong>, the <strong>Homer Eduship Curriculum</strong> is 
-              designed to nurture young learners in their most formative years.</p><p>Inspired by the UK’s 
-              <strong> Early Years Foundation Stage (EYFS)</strong> </p></p>and enriched with global best practices, it blends 
-              play, inquiry, and creativity with a strong academic foundation.</p>
+              At <strong>Junior Odyssey International School (JOIS)</strong>, the <strong>Homer Eduship Curriculum</strong> is 
+              designed to nurture young learners in their most formative years. Inspired by the UK’s 
+              <strong> Early Years Foundation Stage (EYFS)</strong> and enriched with global best practices, it blends 
+              play, inquiry, and creativity with a strong academic foundation.
             </p>
           </div>
         </div>
