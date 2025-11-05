@@ -30,44 +30,20 @@ const About = () => {
               </span>
             </span>
           </h2>
-          <div className="infos" style={{ maxWidth: '600px' }}>
-            <p
+          <div className="infos" style={{ lineHeight: '1.8' }}>
+            <span
               className="animated-layer fade-in-up-animation fadeInUp wow"
               data-wow-offset={200}
               data-wow-delay="0s"
-              style={{ marginBottom: '15px', lineHeight: '1.6' }}
+              style={{ display: 'block', marginBottom: '10px' }}
             >
               At <strong>Junior Odyssey International School (JOIS)</strong>, our{' '}
               <strong>Homer Eduship Curriculum</strong> shapes young minds through
-              joyful and meaningful learning.
-            </p>
-            <p
-              className="animated-layer fade-in-up-animation fadeInUp wow"
-              data-wow-offset={200}
-              data-wow-delay="0.2s"
-              style={{ marginBottom: '15px', lineHeight: '1.6' }}
-            >
-              We inspire curiosity and creativity while nurturing early development
-              through play and exploration.
-            </p>
-            <p
-              className="animated-layer fade-in-up-animation fadeInUp wow"
-              data-wow-offset={200}
-              data-wow-delay="0.4s"
-              style={{ marginBottom: '15px', lineHeight: '1.6' }}
-            >
-              Rooted in the UK's <strong>Early Years Foundation Stage (EYFS)</strong>,
-              our program integrates global best practices.
-            </p>
-            <p
-              className="animated-layer fade-in-up-animation fadeInUp wow"
-              data-wow-offset={200}
-              data-wow-delay="0.6s"
-              style={{ marginBottom: '15px', lineHeight: '1.6' }}
-            >
-              Every child's journey builds a confident, compassionate, and capable learner
+              joyful and meaningful learning. We inspire curiosity and creativity while nurturing early development
+              through play and exploration.Rooted in the UK's <strong>Early Years Foundation Stage (EYFS)</strong>,
+              our program integrates global best practices. Every child's journey builds a confident, compassionate, and capable learner
               ready for tomorrow.
-            </p>
+                </span>
           </div>
         </div>
         {/* INFO ENDS */}
