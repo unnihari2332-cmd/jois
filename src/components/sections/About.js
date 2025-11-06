@@ -1,158 +1,54 @@
-// src/components/About.jsx
-import { useEffect } from "react";
-import { salimovSlider } from "@/src/sliderProps";
-import { Swiper, SwiperSlide } from "swiper/react";
+
 
 const About = () => {
-  // Prevent any body lock from templates
-  useEffect(() => {
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = "auto";
-    return () => { document.body.style.overflow = prev; };
-  }, []);
-
   return (
     <section className="about main-section flex-column-mobile" id="about">
-      {/* TITLE */}
-      <div className="custom-title">
-        <h3>
-          <span>
-            <span className="animated-layer fade-in-left-animation fadeInUp wow">
-              About JOIS
+      {/* INFO HOLDER STARTS */}
+      <div className="info flex-column-mobile">
+        {/* IMAGE STARTS */}
+        <div
+          className="img-container animated-layer image-animation my-photo-container fadeInUp wow"
+          data-wow-offset={200}
+          id="my-photo"
+        >
+          <div>
+            <div>
+              <img className="my-photo" src="assets/about.jpg" alt="About JOIS" />
+            </div>
+          </div>
+        </div>
+        {/* IMAGE ENDS */}
+
+        {/* INFO STARTS */}
+        <div className="about-content">
+          <h2>
+            <span>
+              <span className="animated-layer fade-in-up-animation fadeInUp wow">
+                Welcome to
+              </span>
             </span>
-          </span>
-        </h3>
+            <span>
+              <span className="animated-layer fade-in-up-animation fadeInUp wow">
+                Junior Odyssey International
+              </span>
+            </span>
+          </h2>
+
+          <div className="infos">
+            <p className="animated-layer fade-in-up-animation fadeInUp wow" data-wow-offset={200}>
+              At <strong>Junior Odyssey International School (JOIS)</strong>, the <strong>Homer Eduship Curriculum</strong> is 
+              designed to nurture young learners in their most formative years. Inspired by the UK’s 
+              <strong> Early Years Foundation Stage (EYFS)</strong> and enriched with global best practices, it blends 
+              play, inquiry, and creativity with a strong academic foundation.
+            </p>
+          </div>
+        </div>
+        {/* INFO ENDS */}
       </div>
+      {/* INFO HOLDER ENDS */}
 
-      {/* ABOUT SLIDER — styled like Portfolio, but no fixed overlay arrows */}
-      <Swiper
-        {...salimovSlider.portfolio}
-        className="about-swiper swiper animated-layer fade-in-right-animation fadeInUp wow"
-        data-wow-offset={200}
-      >
-        {/* SLIDE 1 — Overview */}
-        <SwiperSlide className="single-item swiper-slide">
-          <div className="main-content">
-            <img
-              className="img-fluid"
-              src="assets/about.jpg"
-              alt="About Junior Odyssey International"
-            />
-          </div>
-          <div className="details">
-            <h4>Who We Are</h4>
-            <div>
-              <ul>
-                <li>
-                  <span><i className="fa-regular fa-file-lines" /> School :</span>
-                  <span>Junior Odyssey International School (JOIS)</span>
-                </li>
-                <li>
-                  <span><i className="fa-regular fa-hourglass" /> Ages :</span>
-                  <span>Early Years (2–6)</span>
-                </li>
-                <li>
-                  <span><i className="fa-solid fa-code-branch" /> Curriculum :</span>
-                  <span>Homer Eduship • EYFS-aligned</span>
-                </li>
-                <li>
-                  <span><i className="fa-regular fa-user" /> Approach :</span>
-                  <span>Play • Inquiry • Creativity</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </SwiperSlide>
-
-        {/* SLIDE 2 — Philosophy */}
-        <SwiperSlide className="single-item swiper-slide">
-          <div className="main-content">
-            <div className="videocontainer">
-              <video
-                className="youtube-video"
-                autoPlay
-                muted
-                loop
-                playsInline
-                controls={false}
-                poster="assets/portfolio/project-1.jpg"
-              >
-                <source src="/assets/jois.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </div>
-          <div className="details">
-            <h4>Our Philosophy</h4>
-            <div>
-              <ul>
-                <li>
-                  <span><i className="fa-regular fa-file-lines" /> Foundation :</span>
-                  <span>Holistic Early Education</span>
-                </li>
-                <li>
-                  <span><i className="fa-regular fa-hourglass" /> Focus :</span>
-                  <span>Joyful Learning & Wellbeing</span>
-                </li>
-                <li>
-                  <span><i className="fa-solid fa-code-branch" /> Pillars :</span>
-                  <span>Play • Language • Numeracy • Arts</span>
-                </li>
-                <li>
-                  <span><i className="fa-regular fa-user" /> Outcome :</span>
-                  <span>Curious, Confident Learners</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </SwiperSlide>
-
-        {/* SLIDE 3 — Gallery (nested Swiper, like Portfolio’s slider) */}
-        <SwiperSlide className="single-item swiper-slide">
-          <div className="main-content">
-            <Swiper
-              {...salimovSlider.portfolioItems}
-              className="swiper about-gallery-swiper"
-            >
-              <SwiperSlide className="swiper-slide">
-                <img src="assets/portfolio/project-2.jpg" alt="JOIS Glimpse 1" />
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <img src="assets/portfolio/project-3.jpg" alt="JOIS Glimpse 2" />
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <img src="assets/portfolio/project-1.jpg" alt="JOIS Glimpse 3" />
-              </SwiperSlide>
-              <div className="swiper-pagination" />
-            </Swiper>
-          </div>
-          <div className="details">
-            <h4>Campus Glimpses</h4>
-            <div>
-              <ul>
-                <li>
-                  <span><i className="fa-regular fa-file-lines" /> Spaces :</span>
-                  <span>Safe • Stimulating • Inclusive</span>
-                </li>
-                <li>
-                  <span><i className="fa-regular fa-hourglass" /> Programs :</span>
-                  <span>Seeds • Cubs • Owls • Makers</span>
-                </li>
-                <li>
-                  <span><i className="fa-solid fa-code-branch" /> Enrichment :</span>
-                  <span>Music • Art • Movement</span>
-                </li>
-                <li>
-                  <span><i className="fa-regular fa-user" /> Community :</span>
-                  <span>Parents as Partners</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </SwiperSlide>
-      </Swiper>
-
-      {/* Decorative separator (click-through) */}
-      <img alt="" className="separator hide-mobile about-separator" src="assets/separator.png" />
+      {/* SEPARATOR IMAGE */}
+      <img alt="section separator" className="separator hide-mobile" src="assets/separator.png" />
     </section>
   );
 };
