@@ -1,9 +1,19 @@
+// src/components/About.jsx
+import { useEffect } from "react";
 import { salimovSlider } from "@/src/sliderProps";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const About = () => {
+  // Prevent any body lock from templates
+  useEffect(() => {
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "auto";
+    return () => { document.body.style.overflow = prev; };
+  }, []);
+
   return (
     <section className="about main-section flex-column-mobile" id="about">
+      {/* TITLE */}
       <div className="custom-title">
         <h3>
           <span>
@@ -14,12 +24,13 @@ const About = () => {
         </h3>
       </div>
 
+      {/* ABOUT SLIDER — styled like Portfolio, but no fixed overlay arrows */}
       <Swiper
         {...salimovSlider.portfolio}
         className="about-swiper swiper animated-layer fade-in-right-animation fadeInUp wow"
         data-wow-offset={200}
       >
-        {/* SLIDE 1 */}
+        {/* SLIDE 1 — Overview */}
         <SwiperSlide className="single-item swiper-slide">
           <div className="main-content">
             <img
@@ -53,7 +64,7 @@ const About = () => {
           </div>
         </SwiperSlide>
 
-        {/* SLIDE 2 */}
+        {/* SLIDE 2 — Philosophy */}
         <SwiperSlide className="single-item swiper-slide">
           <div className="main-content">
             <div className="videocontainer">
@@ -95,7 +106,7 @@ const About = () => {
           </div>
         </SwiperSlide>
 
-        {/* SLIDE 3 (nested gallery) */}
+        {/* SLIDE 3 — Gallery (nested Swiper, like Portfolio’s slider) */}
         <SwiperSlide className="single-item swiper-slide">
           <div className="main-content">
             <Swiper
@@ -140,6 +151,7 @@ const About = () => {
         </SwiperSlide>
       </Swiper>
 
+      {/* Decorative separator (click-through) */}
       <img alt="" className="separator hide-mobile about-separator" src="assets/separator.png" />
     </section>
   );
