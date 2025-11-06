@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const About = () => {
   return (
     <section className="about main-section flex-column-mobile" id="about">
-      {/* TITLE STARTS */}
       <div className="custom-title">
         <h3>
           <span>
@@ -14,16 +13,14 @@ const About = () => {
           </span>
         </h3>
       </div>
-      {/* TITLE ENDS */}
 
       <Swiper
         {...salimovSlider.portfolio}
-        className="swiper swiper-portfolio animated-layer fade-in-right-animation fadeInUp wow"
+        className="about-swiper swiper animated-layer fade-in-right-animation fadeInUp wow"
         data-wow-offset={200}
       >
-        {/* SLIDE 1 — Overview */}
+        {/* SLIDE 1 */}
         <SwiperSlide className="single-item swiper-slide">
-          {/* MAIN CONTENT */}
           <div className="main-content">
             <img
               className="img-fluid"
@@ -31,7 +28,6 @@ const About = () => {
               alt="About Junior Odyssey International"
             />
           </div>
-          {/* DETAILS */}
           <div className="details">
             <h4>Who We Are</h4>
             <div>
@@ -54,20 +50,13 @@ const About = () => {
                 </li>
               </ul>
             </div>
-            <a href="#" target="_blank" className="custom-btn">
-              <span>
-                prospectus <i className="fa-solid fa-arrow-up-right-from-square" />
-              </span>
-            </a>
           </div>
         </SwiperSlide>
 
-        {/* SLIDE 2 — Philosophy */}
+        {/* SLIDE 2 */}
         <SwiperSlide className="single-item swiper-slide">
-          {/* MAIN CONTENT */}
           <div className="main-content">
             <div className="videocontainer">
-              {/* If you have a YouTube video, replace the video tag with an iframe like in Portfolio */}
               <video
                 className="youtube-video"
                 autoPlay
@@ -81,7 +70,6 @@ const About = () => {
               </video>
             </div>
           </div>
-          {/* DETAILS */}
           <div className="details">
             <h4>Our Philosophy</h4>
             <div>
@@ -104,22 +92,16 @@ const About = () => {
                 </li>
               </ul>
             </div>
-            <a href="#" target="_blank" className="custom-btn">
-              <span>
-                explore more <i className="fa-solid fa-arrow-up-right-from-square" />
-              </span>
-            </a>
           </div>
         </SwiperSlide>
 
-        {/* SLIDE 3 — Glimpses (nested slider like Portfolio’s “Slider Project”) */}
+        {/* SLIDE 3 (nested gallery) */}
         <SwiperSlide className="single-item swiper-slide">
           <div className="main-content">
             <Swiper
               {...salimovSlider.portfolioItems}
-              className="swiper swiper-portfolio-item"
+              className="swiper about-gallery-swiper"
             >
-              {/* Use your own images here if available */}
               <SwiperSlide className="swiper-slide">
                 <img src="assets/portfolio/project-2.jpg" alt="JOIS Glimpse 1" />
               </SwiperSlide>
@@ -137,7 +119,7 @@ const About = () => {
             <div>
               <ul>
                 <li>
-                  <span><i className="fa-regular fa-file-lines" /> Learning Spaces :</span>
+                  <span><i className="fa-regular fa-file-lines" /> Spaces :</span>
                   <span>Safe • Stimulating • Inclusive</span>
                 </li>
                 <li>
@@ -154,25 +136,11 @@ const About = () => {
                 </li>
               </ul>
             </div>
-            <a href="#" target="_blank" className="custom-btn">
-              <span>
-                admissions <i className="fa-solid fa-arrow-up-right-from-square" />
-              </span>
-            </a>
           </div>
         </SwiperSlide>
-
-        {/* NAV BUTTONS (match Portfolio styling) */}
-        <div className="nav-item next-item animated-btn">
-          <span />
-        </div>
-        <div className="nav-item prev-item animated-btn">
-          <span />
-        </div>
       </Swiper>
 
-      {/* Separator image to mirror Portfolio layout */}
-      <img alt="" className="separator hide-mobile" src="assets/separator.png" />
+      <img alt="" className="separator hide-mobile about-separator" src="assets/separator.png" />
     </section>
   );
 };
