@@ -70,17 +70,19 @@ body {
 
 #wrapper {
   width: 100%;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 main {
   display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 section {
   position: relative;
   min-height: 100vh;
-  height: 100vh;
+  height: auto;
 }
 
 .main-section {
