@@ -3,6 +3,7 @@
 @import "swiper/css/pagination";
 @import "swiper/css/scrollbar";
 
+/* -------- your existing rules -------- */
 .swiper-portfolio {
   padding-right: 250px;
 }
@@ -13,4 +14,66 @@
     padding-left: 30px;
     padding-right: 0px;
   }
+}
+
+/* =======================
+   Overlay Kill Switch
+   (add BELOW your rules)
+   ======================= */
+
+html, body {
+  overflow: auto !important;
+  height: auto !important;
+}
+
+/* Prevent full-screen/fixed overlays from template CSS */
+.main-section,
+.portfolio,
+.about,
+.swiper,
+.swiper-portfolio,
+.swiper-portfolio-item {
+  position: relative !important;
+  height: auto !important;
+  min-height: auto !important;
+  overflow: visible !important;
+  z-index: auto !important;
+}
+
+/* Remove template's fixed overlay arrows & animated buttons (if any exist) */
+.nav-item,
+.next-item,
+.prev-item,
+.animated-btn {
+  display: none !important;
+  pointer-events: none !important;
+}
+
+/* Decorative separators must not block clicks */
+.separator,
+.hide-mobile.separator,
+.about-separator {
+  pointer-events: none !important;
+  position: relative !important;
+  z-index: 0 !important;
+}
+
+/* Neutralize any inline 'position:fixed' that slipped in */
+.main-section[style*="position: fixed"],
+.swiper[style*="position: fixed"],
+[class*="swiper"][style*="position: fixed"] {
+  position: relative !important;
+}
+
+/* Animation libs sometimes keep content hidden until scroll */
+.wow,
+[class*="animated-layer"] {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Keep app content above stray backgrounds */
+#root > * {
+  position: relative;
+  z-index: 1;
 }
